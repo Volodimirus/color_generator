@@ -1,0 +1,126 @@
+/* Общие стили */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    font-size: 14px;
+    font-family: "Roboto", sans-serif;
+}
+
+button {
+    border: none;
+    outline: none;
+    cursor: pointer; /* Улучшение UX */
+}
+
+.container {
+    margin: 0 auto;
+    width: 70%;
+    display: flex;
+    justify-content: center;
+}
+
+/* Стили для общего контейнера */
+
+.generation {
+    min-height: 100vh;
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+    row-gap: 30px;
+    text-align: center;
+}
+
+/* Стили для блока генерации цвета */
+
+.generation-color {
+    content: "";
+    width: 250px;
+    height: 250px;
+    transition: background-color 0.2s ease;
+    background-color: #000; /* Если в будущем интегрировать этот код в проект с препроцессором, то заменю значение на переменную */
+}
+
+/* Стили для панели сгенерированного кода */
+
+.generation-code {
+    display: flex;
+    justify-content: center;
+    font-size: 24px;
+    column-gap: 10px;
+}
+
+.copy-hex_btn {
+    transition: opacity 0.3s ease;
+    position: relative;
+}
+
+.copy-hex_btn:hover {
+    opacity: 0.7;
+}
+
+.copy-hex_btn .copy-hex_ico {
+    width: 24px;
+}
+
+/* Стили для всплывающего окна "Copied!" */
+
+.copy-hex_btn .copied_push {
+    visibility: hidden;
+    background-color: green;
+    color: #fff;
+    width: 55px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 14px;
+    position: absolute;
+    padding: 5px;
+    border-radius: 5px;
+    top: -15px;
+    right: -55px;
+}
+
+/* Стили для кнопки генерации цвета */
+
+.generate-color_btn {
+    background-color: #241f1f;
+    font-weight: bold;
+    width: 100%;
+    font-size: 16px;
+    height: 50px;
+    transition: background-color 0.3s ease;
+    color: #fff;
+}
+
+.generate-color_btn:hover {
+    background-color: #333;
+}
+
+/* Медиа-запросы для мобильных устройств */
+
+@media (max-width: 768px) {
+    .container {
+        width: 90%;
+    }
+
+    .generation-color {
+        width: 200px;
+        height: 200px;
+    }
+
+    .generation-code {
+        font-size: 20px;
+    }
+
+    .generate-color_btn {
+        font-size: 14px;
+        height: 45px;
+    }
+}

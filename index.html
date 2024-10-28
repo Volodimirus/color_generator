@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="index.css" />
+        <title>Color Generator</title>
+    </head>
+    <body>
+        <main class="container">
+            <section class="generation">
+                <div
+                    class="generation-color"
+                    aria-label="Generated color"
+                ></div>
+                <div class="generation-code">
+                    <p class="code" id="color-code">#000000</p>
+                    <button class="copy-hex_btn" aria-label="Copy color code">
+                        <img
+                            class="copy-hex_ico"
+                            src="static/img/copy-link.png"
+                            alt="Copy image"
+                        />
+                        <div class="copied_push">
+                            <span>Copied!</span>
+                        </div>
+                    </button>
+                </div>
+                <button
+                    class="generate-color_btn"
+                    aria-label="Generate a new color"
+                >
+                    Сгенерировать цвет
+                </button>
+            </section>
+        </main>
+
+        <script defer src="index.js"></script>
+    </body>
+</html>
